@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Links and Images</h1>
+    <p>
+        This lesson covers...
+        <ul>
+            <li>create link to other websites</li>
+            <li>create link page on your website</li>
+            <li>difference between absolute and relative links</li>
+            <li>displaying images</li>
+        </ul>
+    </p>
+
+    <h2>Anchor Elements</h2>
+    <p>
+        The anchor element &lt;a&gt; takes an additional attribute <em>href</em> that is a link to another resource
+    </p>
+    <a href="https://www.theodinproject.com/lessons/foundations-links-and-images">Link to Lesson</a>
+    <p>
+        This link actually looks like this: &lt;a href="https://www.theodinproject.com/lessons/foundations-links-and-images"&gt;Link to Lesson&lt;/a&gt;
+    </p>
+
+    <h3>Open in New Tab</h3>
+    <p>
+        Given no extra attributes, the anchor will open the link in the current tab.
+
+        To open in a new tab, add the <em>target="_blank"</em> attribute.
+    </p>
+    <a href="https://www.theodinproject.com/lessons/foundations-links-and-images" target="_blank">Link to open in new tab</a>
+
+    <h3>Target Security Risks</h3>
+    <p>
+        Adding the <em>target</em> attribute poses a security risk, as JavaScript can modify the original page.
+
+        To prevent this, add <em>rel="noopener noreferrer"</em> attribute.
+    </p>
+    <p>
+        "noopener" prevents JavaScript from modifying the original page. "noreferrer" does not tell the new tab where the user came from.
+    </p>
+    <a href="https://owasp.org/www-community/attacks/Reverse_Tabnabbing" target="_blank" rel="noopener noreferrer">Tabnabbing</a>
+
+    <h2>Types of Links</h2>
+    <h3>Absolute Links</h3>
+    <p>
+        Absolute links have been used above where they include the <em>scheme</em> and <em>domain</em> of the resource.
+
+        These links often link out to external websites.
+    </p>
+
+    <h3>Relative Links</h3>
+    <p>
+        Just like using the command line, using "." and ".." refer to the current and parent directories, respectively, on the local machine.
+    </p>
+    <p>
+        So if I have another html file within the folder that this <em>index.html</em> is in, I do not need to use dot notation.
+    </p>
+    <a href="page2.html">Link to page2.html</a>
+
+    <p>
+        But if I want to link back to the "lists" lesson, in another folder, I need to use dot notation by using <em>../lists/index.html</em>
+    </p>
+    <a href="../lists/index.html" target="_blank" rel="noopener noreferrer">Link to lists.html</a>
+
+    <h2>Images</h2>
+    <p>
+        We can use previous knowledge of relative/absolute links to also display images using the &lt;img&gt; tag with the <em>src</em> attribute</p>
+    <p>
+        Always include an <em>alt</em> attribute for users with screen readers and a replacement for if the image doesn't load.
+    </p>
+    <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" height="150" width="150">
+
+    <h3>Image Sizing</h3>
+    <p>
+        To prevent the webpage from jumping and flashing while loading, specify an image size (even if modified by CSS later) using the <em>height</em> and <em>width</em> attributes
+    </p>
+</body>
+</html>
